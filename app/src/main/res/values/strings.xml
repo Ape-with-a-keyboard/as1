@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">wankinvi-HabitTracker</string>
+    <string name="button_create">Add</string>
+    <string name="title_activity_new_habit">NewHabitActivity</string>
+    <string name="new_habit_name_message">Habit Info</string>
+</resources>

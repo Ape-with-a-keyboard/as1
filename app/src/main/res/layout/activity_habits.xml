@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    tools:context="ape_with_a_keyboard.wankinvi_habittracker.HabitDetails">
+
+    <Button
+        android:id="@+id/habit_complete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:text="Complete!"
+        android:textAllCaps="false"
+        android:layout_marginRight="40dp" />
+
+    <TextView
+        android:id="@+id/habit_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/habit_complete"
+        android:layout_alignParentStart="true"
+        android:textSize="24sp"
+        android:paddingTop="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+    <TextView
+        android:id="@+id/habit_days"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/habit_name"
+        android:fontFamily="sans-serif-light"
+        android:textSize="16sp"
+        android:paddingLeft="16dp"
+        android:paddingBottom="16dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/dividerGrey"
+        android:layout_alignParentBottom="true" />
+
+    <Button
+        android:text="X"
+        android:id="@+id/habit_delete"
+        android:elevation="1dp"
+        android:layout_width="40dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:layout_height="40dp"
+        style="@style/Base.Widget.AppCompat.Button.Colored" />
+
+    <ImageView
+        android:id="@+id/habit_completed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/habit_complete"
+        android:src="@drawable/ic_action_complete" />
+
+</RelativeLayout>

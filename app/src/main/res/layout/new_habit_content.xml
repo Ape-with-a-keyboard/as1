@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:layout_margin="16dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="ape_with_a_keyboard.wankinvi_habittracker.NewHabit"
+    tools:showIn="@layout/activity_new_habit">
+    //Referenced http://www.tutorialspoint.com/android/android_datepicker_control.htm
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:id="@+id/new_habit_desc_text"/>
+
+    <EditText android:id="@+id/new_habit_name_message"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/new_habit_desc_text"
+        android:hint="@string/new_habit_name_message" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:layout_below="@id/new_habit_name_message"
+        android:id="@+id/new_habit_date_text"/>
+
+    <LinearLayout
+        android:id="@+id/new_habit_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/new_habit_date_text" >
+
+        <Button
+            android:id="@+id/new_habit_date_pick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick date"
+            android:onClick="pickDate" />
+
+        <TextView
+            android:id="@+id/new_habit_date_current"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:paddingLeft="12dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Days"
+        android:layout_below="@id/new_habit_date"
+        android:id="@+id/new_habit_days_text" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/new_habit_days_text"
+        android:id="@+id/new_habit_days"
+        android:layout_centerVertical="true">
+
+        <ToggleButton
+            android:text="ToggleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textOff="S"
+            android:textOn="S"
+            android:layout_weight="1"
+            android:id="@+id/toggleButton1" />
+
+        <ToggleButton
+            android:text="ToggleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/new_habit_name_message"
+            android:layout_toRightOf="@id/toggleButton1"
+            android:textOff="M"
+            android:textOn="M"
+            android:layout_weight="1"
+            android:id="@+id/toggleButton2" />
+
+        <ToggleButton
+            android:text="ToggleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/new_habit_name_message"
+            android:layout_toRightOf="@id/toggleButton2"
+            android:textOff="T"
+            android:textOn="T"
+            android:layout_weight="1"
+            android:id="@+id/toggleButton3" />
+
+        <ToggleButton
+            android:text="ToggleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/new_habit_name_message"
+            android:layout_toRightOf="@id/toggleButton3"
+            android:textOff="W"
+            android:textOn="W"
+            android:layout_weight="1"
+            android:id="@+id/toggleButton4" />
+
+        <ToggleButton
+            android:text="ToggleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/new_habit_name_message"
+            android:layout_toRightOf="@id/toggleButton4"
+            android:textOff="T"
+            android:textOn="T"
+            android:layout_weight="1"
+            android:id="@+id/toggleButton5" />
+
+        <ToggleButton
+            android:text="ToggleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/new_habit_name_message"
+            android:layout_toRightOf="@id/toggleButton5"
+            android:textOff="F"
+            android:textOn="F"
+            android:layout_weight="1"
+            android:id="@+id/toggleButton6" />
+
+        <ToggleButton
+            android:text="ToggleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/new_habit_name_message"
+            android:layout_toRightOf="@id/toggleButton6"
+            android:textOff="S"
+            android:textOn="S"
+            android:layout_weight="1"
+            android:id="@+id/toggleButton7" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_create"
+        android:onClick="createHabit"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="34dp"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>
